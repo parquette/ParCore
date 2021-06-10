@@ -1,5 +1,4 @@
-public struct ParCoreModule {
-    public static let version = "1.0.0"
-    internal var internalParCoreData = "Hi ParCore!"
 
+public struct ParCoreModule {
+    public static let version = "0.0.1"
 }
