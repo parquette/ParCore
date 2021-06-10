@@ -23,7 +23,7 @@ jobs:
         run: swift test -v --configuration release -Xswiftc -enable-testing
 
   watchOS:
-    if: false # disabled until we can work around missing XCTest in non-xcodeproj SPM module
+    #if: false # disabled until we can work around missing XCTest in non-xcodeproj SPM module
     runs-on: macos-latest
     needs: [Linux] # Linux must pass first
 
