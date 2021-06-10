@@ -3,6 +3,7 @@ import TabularData
 #else
 import Foundation
 
+/// Missing implementations simply delegate to `unimplemented`, which crashes the program with `fatalError("unimplemented")`
 @inlinable func unimplemented() -> Never {
     fatalError("unimplemented")
 }
