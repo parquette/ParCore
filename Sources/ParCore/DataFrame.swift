@@ -1,9 +1,11 @@
 
 #if canImport(TabularData)
 import TabularData
-//public typealias ParFrameProtocol
 
-public protocol ParFrameProtocol {
+/// Two-dimensional, size-mutable, potentially heterogeneous tabular data.
+///
+/// This is a shim for `TabularData.DataFrameProtocol` for systems where TabularData is unavailable
+public protocol ParFrameProtocol : TabularData.DataFrameProtocol {
 
 }
 
@@ -12,10 +14,7 @@ extension TabularData.DataFrame : ParFrameProtocol {
 }
 #else
 
-/// Two-dimensional, size-mutable, potentially heterogeneous tabular data.
-///
-/// This is a shim for `TabularData.DataFrameProtocol` for systems where TabularData is unavailable
-public protocol ParFrameProtocol : TabularData.DataFrameProtocol {
+public protocol ParFrameProtocol {
 
 }
 
