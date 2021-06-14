@@ -1361,7 +1361,7 @@ public struct ColumnID<T> {
     /// - Parameters:
     ///   - name: The name of a column.
     ///   - type: The type of the column's elements.
-    public init(_ name: String, _ type: T.Type) { unimplemented() }
+    public init(_ name: String, _ type: T.Type) { self.name = name }
 }
 
 extension ColumnID : CustomStringConvertible {
