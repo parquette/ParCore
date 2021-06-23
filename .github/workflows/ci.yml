@@ -34,7 +34,7 @@ jobs:
       - run: |
             xcodebuild clean build \
               -scheme "ParCore" \
-              -sdk "watchsimulator7.2" \
+              -sdk "watchsimulator" \
               -destination "OS=7.2,name=Apple Watch Series 6 - 44mm" \
               ONLY_ACTIVE_ARCH=YES CODE_SIGNING_REQUIRED=NO
 
@@ -47,8 +47,8 @@ jobs:
       - run: |
             xcodebuild clean test \
               -scheme "ParCore" \
-              -sdk "iphonesimulator14.4" \
-              -destination "OS=14.4,name=iPod Touch (7th generation)" \
+              -sdk "iphonesimulator" \
+              -destination "platform=iOS Simulator,name=iPod touch (7th generation)" \
               ONLY_ACTIVE_ARCH=YES CODE_SIGNING_REQUIRED=NO
 
   tvOS:
@@ -60,8 +60,8 @@ jobs:
       - run: |
             xcodebuild clean test \
               -scheme "ParCore" \
-              -sdk "appletvsimulator14.3" \
-              -destination "OS=14.3,name=Apple TV" \
+              -sdk "appletvsimulator" \
+              -destination "platform=tvOS Simulator,name=Apple TV" \
               ONLY_ACTIVE_ARCH=YES CODE_SIGNING_REQUIRED=NO
 
   macOS10:
