@@ -35,7 +35,7 @@ jobs:
             xcodebuild clean build \
               -scheme "ParCore" \
               -sdk "watchsimulator" \
-              -destination "OS=7.2,name=Apple Watch Series 6 - 44mm" \
+              -destination "platform=watchOS Simulator,name=Apple Watch Series 6 - 44mm" \
               ONLY_ACTIVE_ARCH=YES CODE_SIGNING_REQUIRED=NO
 
   iOS:
