@@ -1,5 +1,5 @@
 import XCTest
-@testable import ParCore
+import ParCore
 
 final class ParCoreTests: XCTestCase {
 
