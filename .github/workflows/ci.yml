@@ -32,6 +32,7 @@ jobs:
       # “XCTest is not available when building for watchOS Simulator”
       - run: |
             xcodebuild clean build \
+              -disablePackageRepositoryCache \
               -configuration Release \
               -scheme "ParCore" \
               -sdk "watchsimulator" \
@@ -46,6 +47,7 @@ jobs:
       - uses: actions/checkout@v2
       - run: |
             xcodebuild clean test \
+              -disablePackageRepositoryCache \
               -configuration Release \
               -scheme "ParCore" \
               -sdk "iphonesimulator" \
@@ -60,6 +62,7 @@ jobs:
       - uses: actions/checkout@v2
       - run: |
             xcodebuild clean test \
+              -disablePackageRepositoryCache \
               -configuration Release \
               -scheme "ParCore" \
               -sdk "appletvsimulator" \
